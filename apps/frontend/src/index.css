@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+@theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-red: #d81413;
+  --color-blue: #0040a0;
+  --color-gray-light: #d9d9d9;
+  --color-gray-dark: #2b2b2b;
+  --container-max-width: 1440px;
+  --font-family-satoshi: "Satoshi", sans-serif;
+  --font-family-arima: var(--font-arima, "Arima"), cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: var(--font-family-satoshi);
+  }
+
+  ::selection {
+    background-color: #d81413;
+    color: #ffffff;
+  }
+
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .font-arima {
+    font-family: var(--font-arima), cursive;
+  }
+}
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("/fonts/Satoshi-Variable.woff") format("woff");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-VariableItalic.woff") format("woff");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}

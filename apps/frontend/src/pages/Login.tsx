@@ -42,8 +42,8 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-              placeholder="nama@email.com"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+              placeholder="Masukkan email"
             />
           </div>
 
@@ -54,7 +54,7 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
               placeholder="Masukkan password"
             />
           </div>
@@ -62,7 +62,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gray-900 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition disabled:opacity-50"
+            className="w-full bg-brand text-white py-2.5 rounded-lg text-sm font-medium hover:bg-brand/90 transition disabled:opacity-50"
           >
             {loading ? "Loading..." : "Login"}
           </button>
@@ -70,7 +70,7 @@ export default function Login() {
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Belum punya akun?{" "}
-          <Link to="/register" className="text-gray-900 font-medium hover:underline">
+          <Link to="/register" className="text-brand font-medium hover:underline">
             Daftar
           </Link>
         </p>
